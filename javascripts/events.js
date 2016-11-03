@@ -39,7 +39,15 @@ h1Header.addEventListener("mouseover", function() {
 
 // 3. When the mouse leaves the h1 tag, the output element should contain the text "You left me!!".
 
+h1Header.addEventListener("mouseleave", function() {
+		console.log("You left me!!");
+});
+
 // 4. When you type characters into the input field, the output element should mirror the text in the input field.
+
+inputField.addEventListener("keyup", function() {
+	outputTarget.innerHTML = inputField.value;
+});
 
 // 5. When you click the "Add color" button, the `guinea-pig` element's text color should change to blue.
 
