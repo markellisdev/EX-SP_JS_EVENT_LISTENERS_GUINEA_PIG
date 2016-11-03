@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,uCAAuC;AACvC,KAAM;EACL,KAAK,EAAE,IAAI;;AAGZ,KAAM;EACL,SAAS,EAAE,IAAI;;AAGhB,QAAS;EACR,MAAM,EAAE,aAAa;;AAGtB,MAAO;EACN,aAAa,EAAE,GAAG;;AAGnB,KAAM;EACL,WAAW,EAAE,IAAI;;AAGlB,WAAY;EACX,UAAU,EAAE,MAAM;;AAGnB,UAAW;EACV,OAAO,EAAE,KAAK",
+"sources": ["../sass/events.scss"],
 "names": [],
 "file": "events.css"
 }
