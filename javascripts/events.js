@@ -22,7 +22,7 @@
 
  var guineaPig = document.getElementById("guinea-pig");
 
-
+var Buttons = document.getElementsByTagName("button");
 
 function listeners (event) {
  	outputTarget.innerHTML = "You clicked on the " + event.target.innerHTML + " section";
@@ -90,3 +90,9 @@ sections[5].style.fontStyle = "italic";
 
 
 // 11. Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
+
+for (var i=0; i<sections.length; i++) {
+	console.log("are you block" );
+ 	Buttons[i].style.display = "block";
+ }
+
