@@ -6,7 +6,7 @@
 // 1. When any section is clicked the output target text should be "You clicked on the {text of the section} section"
 /* ------------ VARIABLES --------------- */
 
- var numOfSections = document.getElementsByTagName("section");
+ var sections = document.getElementsByTagName("section");
 
  var outputTarget = document.getElementById("output-target");
 
@@ -28,9 +28,9 @@ function listeners (event) {
  	outputTarget.innerHTML = "You clicked on the " + event.target.innerHTML + " section";
  }
 
- for (var i=0; i<numOfSections.length; i++) {
- 	console.log("listId", numOfSections[i]);
- 	numOfSections[i].addEventListener("click", listeners);
+ for (var i=0; i<sections.length; i++) {
+ 	console.log("listId", sections[i]);
+ 	sections[i].addEventListener("click", listeners);
  }
 
 // 2. When the mouse is over the h1 tag, the output element should contain the text "You moved your mouse over the header".
@@ -81,6 +81,12 @@ roundButton.addEventListener("click", function() {
 
 // 9. The first section's text should be bold.
 
+sections[0].style.fontWeight = "bold";
+
 // 10. The last section's text should be bold and italicized.
+
+sections[5].style.fontWeight = "bold";
+sections[5].style.fontStyle = "italic";
+
 
 // 11. Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
