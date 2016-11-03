@@ -6,32 +6,32 @@
 // 1. When any section is clicked the output target text should be "You clicked on the {text of the section} section"
 /* ------------ VARIABLES --------------- */
 
- var sections = document.getElementsByTagName("section");
+var sections = document.getElementsByTagName("section");
 
- var outputTarget = document.getElementById("output-target");
+var outputTarget = document.getElementById("output-target");
 
- var inputField = document.getElementById("keypress-input");
+var inputField = document.getElementById("keypress-input");
 
- var colorButton = document.getElementById("add-color");
+var colorButton = document.getElementById("add-color");
 
- var hulkButton = document.getElementById("make-large");
+var hulkButton = document.getElementById("make-large");
 
- var captureButton = document.getElementById("add-border");
+var captureButton = document.getElementById("add-border");
 
- var roundButton = document.getElementById("add-rounding");
+var roundButton = document.getElementById("add-rounding");
 
- var guineaPig = document.getElementById("guinea-pig");
+var guineaPig = document.getElementById("guinea-pig");
 
 var Buttons = document.getElementsByTagName("button");
 
 function listeners (event) {
  	outputTarget.innerHTML = "You clicked on the " + event.target.innerHTML + " section";
- }
+}
 
  for (var i=0; i<sections.length; i++) {
  	console.log("listId", sections[i]);
  	sections[i].addEventListener("click", listeners);
- }
+}
 
 // 2. When the mouse is over the h1 tag, the output element should contain the text "You moved your mouse over the header".
 
@@ -58,41 +58,47 @@ inputField.addEventListener("keyup", function() {
 // 5. When you click the "Add color" button, the `guinea-pig` element's text color should change to blue.
 
 colorButton.addEventListener("click", function() {
-	guineaPig.style.color = "blue";
+	guineaPig.classList.toggle("blue");
+	// guineaPig.style.color = "blue";
 });
 
 // 6. When you click the "Hulkify" button, the `guinea-pig` element's font size should become much larger.
 
 hulkButton.addEventListener("click", function() {
-	guineaPig.style.fontSize = "30px";
+	guineaPig.classList.toggle("hulk");
 });
 
 // 7. When you click the "Capture it" button, the `guinea-pig` element should have a border added to it.
 
 captureButton.addEventListener("click", function() {
-	guineaPig.style.border = "3px red solid";
+	guineaPig.classList.toggle("capture");
+	// guineaPig.style.border = "3px red solid";
 });
 
 // 8. When you click the "Rounded" button, the `guinea-pig` element's border should become rounded.
 
 roundButton.addEventListener("click", function() {
-	guineaPig.style.borderRadius = "5px";
+	guineaPig.classList.toggle("round");
+	// guineaPig.style.borderRadius = "5px";
 });
 
 // 9. The first section's text should be bold.
 
-sections[0].style.fontWeight = "bold";
+sections[0].classList.add("bold");
+// sections[0].style.fontWeight = "bold";
 
 // 10. The last section's text should be bold and italicized.
 
-sections[5].style.fontWeight = "bold";
-sections[5].style.fontStyle = "italic";
+sections[5].classList.add("bold");
+// sections[5].style.fontWeight = "bold";
+sections[5].classList.add("italicized");
+// sections[5].style.fontStyle = "italic";
 
 
 // 11. Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
 
-for (var i=0; i<sections.length; i++) {
+for (var i=0; i<Buttons.length; i++) {
 	console.log("are you block" );
- 	Buttons[i].style.display = "block";
- }
+ 	Buttons[i].classList.add("blockhead");
+}
 
