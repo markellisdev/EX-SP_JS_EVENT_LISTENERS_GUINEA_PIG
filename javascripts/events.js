@@ -1,4 +1,8 @@
 "use strict";
+
+/* jshint undef: true, unused: true */
+/* global document, console */
+
 // 1. When any section is clicked the output target text should be "You clicked on the {text of the section} section"
 /* ------------ VARIABLES --------------- */
 
@@ -15,6 +19,8 @@
  var captureButton = document.getElementById("add-border");
 
  var roundButton = document.getElementById("add-rounding");
+
+ var guineaPig = document.getElementById("guinea-pig");
 
 
 
@@ -51,11 +57,27 @@ inputField.addEventListener("keyup", function() {
 
 // 5. When you click the "Add color" button, the `guinea-pig` element's text color should change to blue.
 
+colorButton.addEventListener("click", function() {
+	guineaPig.style.color = "blue";
+});
+
 // 6. When you click the "Hulkify" button, the `guinea-pig` element's font size should become much larger.
+
+hulkButton.addEventListener("click", function() {
+	guineaPig.style.fontSize = "30px";
+});
 
 // 7. When you click the "Capture it" button, the `guinea-pig` element should have a border added to it.
 
+captureButton.addEventListener("click", function() {
+	guineaPig.style.border = "3px red solid";
+});
+
 // 8. When you click the "Rounded" button, the `guinea-pig` element's border should become rounded.
+
+roundButton.addEventListener("click", function() {
+	guineaPig.style.borderRadius = "5px";
+});
 
 // 9. The first section's text should be bold.
 
